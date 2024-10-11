@@ -1,19 +1,29 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  <section class="st">
-    <div class="container">
-      <h1> GUESSING GAME</h1>
-      <p>Guess a number between 1 and 100</p>
-      <input type="number" id="guess">
-      <button id="but" onclick="checkGuess()">Submit Guess</button>
-      <p id="feedback"></p>
-      </section>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+ <title></title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="st">
+<form>
+<h1>Voter Login</h1>
+<label for="voter_id">Voter id No: <i class="fa fa-drivers-license-o"></i></label>
+<input id="voter_id  type="text" placeholder="Enter your voter id NO" > <br>
+
+<label for="voter_name">Voter Name: </label>
+<input id="voter_name  type="text" placeholder="Enter your Name" ><br>
+
+<label for="mobileno">Mobile No: </label>
+<input id="mobileno" type="number" placeholder="Enter your Mobile No" ><br>
+
+<label for="otpno">Enter OTP: </label>
+<input id="otpno" type="number" placeholder="Enter the OTP" ><br>
+
+<button id="genOTP" type="otp" onclick="generateotp()">Generate OTP</button> <br> <br>
+<button id="submit"> <a href="location. html">submit </a></button>
+</form>
+<p></p>
+ <script src="script.js"></script>
+</body>
 </html>
