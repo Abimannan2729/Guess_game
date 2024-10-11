@@ -8,9 +8,10 @@ function checkGuess() {
   attempts--;
 
   if (guess === randomNumber) {
-    feedbackElement.innerText = "Congratulations!";
+    feedbackElement.innerText = `Congratulations! ${randomNumber} is correct!`;
     feedbackElement.style.color = "green";
     attempts = 0; // End the game
+       document.getElementById("but").disabled= true;
   } else if (guess < randomNumber) {
     feedbackElement.innerText = `Too low! Try again. ${attempts} attempts remaining.`;
     feedbackElement.style.color = "red";
@@ -18,13 +19,13 @@ function checkGuess() {
     feedbackElement.innerText = `Too high! Try again. ${attempts} attempts remaining.`;
     feedbackElement.style.color = "red";
   }
-
+if(guess!==randomNumber){
   if (attempts === 0) {
     feedbackElement.innerText = `Game over. ${randomNumber} is correct.`;
     feedbackElement.style.color = "red";
    document.getElementById("but").disabled= true;
    document.getElementById("but").style.color="gray";
   }
-
+}
   inputElement.value = ""; // Clear input after guess
 }
